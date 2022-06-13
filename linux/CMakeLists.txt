@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "pattern_s")
-set(APPLICATION_ID "com.example.pattern_s")
+set(BINARY_NAME "pattern")
+set(APPLICATION_ID "com.example.pattern")
 
 cmake_policy(SET CMP0063 NEW)
 

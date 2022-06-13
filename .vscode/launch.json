@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "pattern_s",
+      "name": "pattern",
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug"

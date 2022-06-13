@@ -1,4 +1,4 @@
-package com.example.pattern_s
+package com.example.pattern
 
 import io.flutter.embedding.android.FlutterActivity
 

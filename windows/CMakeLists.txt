@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(pattern_s LANGUAGES CXX)
+project(pattern LANGUAGES CXX)
 
-set(BINARY_NAME "pattern_s")
+set(BINARY_NAME "pattern")
 
 cmake_policy(SET CMP0063 NEW)
 

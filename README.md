@@ -1,4 +1,4 @@
-# pattern_s
+# pattern
 
 A new Flutter project.
 
