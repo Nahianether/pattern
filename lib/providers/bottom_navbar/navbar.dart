@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
-import 'package:pattern/screens/screen1/screen1.dart';
-import 'package:pattern/screens/screen2/screen2.dart';
-import 'package:pattern/screens/screen3/screen3.dart';
-import 'package:pattern/screens/screen4/screen4.dart';
-import 'package:pattern/screens/screen5/screen5.dart';
+import '../../screens/screen1/screen1.dart';
+import '../../screens/screen2/screen2.dart';
+import '../../screens/screen3/screen3.dart';
+import '../../screens/screen4/screen4.dart';
+import '../../screens/screen5/screen5.dart';
 
 import '../../helpers/routes/custom_routes.dart';
 
