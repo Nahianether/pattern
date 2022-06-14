@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' show MultipartRequest;
 import 'package:intl/intl.dart' show DateFormat;
@@ -37,6 +39,8 @@ const Map<String, String> headerNoAuth = {'Accept': 'application/json'};
 double kImageSize = 35.0;
 
 const Color kDefaultColor = Colors.grey;
+
+int randomColor = Random().nextInt(Colors.primaries.length);
 
 Map<String, String> headers = {
   'Accept': 'application/json',
