@@ -11,8 +11,10 @@ import 'package:flutter/services.dart' show SystemChrome;
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart' show MultiProvider, Provider;
 
+import 'common/functions/no_internet.dart';
 import 'database/functions.dart' show HiveFuntions;
 import 'helpers/themes/themes.dart' show uiConfig;
+import 'localization/loalization.dart';
 import 'providers/providers.dart';
 import 'providers/theme/theme.dart' show ThemeProvider;
 import 'screens/wrapper.dart' show Wrapper;
@@ -33,6 +35,7 @@ Future<void> _init() async {
   await HiveFuntions.openAllBoxes();
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(uiConfig);
+  initConnectionListener();
 }
 
 class Main extends StatelessWidget {
@@ -47,6 +50,9 @@ class Main extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: _theme.theme,
+      onGenerateTitle: onGenerateTitle,
+      supportedLocales: supportedLocales,
+      localizationsDelegates: localizationsDelegates,
       home: Wrapper(),
     );
   }

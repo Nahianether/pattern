@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'components/screen1_body.dart' show Body;
+import 'components/screen3_body.dart';
 
-class Screen1 extends StatelessWidget {
-  const Screen1({Key? key}) : super(key: key);
+
+class Screen3 extends StatelessWidget {
+  const Screen3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

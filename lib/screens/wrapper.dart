@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart'
-    show BuildContext, Key, StatelessWidget, Widget;
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/material.dart';
 
+import '../common/functions/no_internet.dart';
+import '../common/ui/no_internet_screen.dart';
 import '../helpers/size_config/size_config.dart' show ScreenSize;
 import 'screen1/screen1.dart' show Screen1;
 
@@ -12,6 +14,14 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _sizeConfig.init(context);
-    return const Screen1();
+    return StreamBuilder<ConnectivityResult>(
+      stream: connectionStream,
+      builder: (context, snapshot) {
+        if (snapshot.hasData && snapshot.data == ConnectivityResult.none) {
+          return const NoInternetConnectionScreen();
+        }
+        return const Screen1();
+      },
+    );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' show MultipartRequest;
 import 'package:intl/intl.dart' show DateFormat;
 
@@ -32,6 +33,10 @@ const String baseLink = '';
 const String playStoreUrl = 'https://play.google.com/store/apps/details?id= ';
 
 const Map<String, String> headerNoAuth = {'Accept': 'application/json'};
+
+double kImageSize = 35.0;
+
+const Color kDefaultColor = Colors.grey;
 
 Map<String, String> headers = {
   'Accept': 'application/json',

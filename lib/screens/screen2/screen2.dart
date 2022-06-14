@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components/body.dart' show Body;
+import 'components/screen2_body.dart' show Body;
 
 class Screen2 extends StatelessWidget {
   const Screen2({Key? key}) : super(key: key);
