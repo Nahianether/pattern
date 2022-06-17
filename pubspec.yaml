@@ -34,6 +34,10 @@ dev_dependencies:
     sdk: flutter
   hive_generator: ^1.1.3
 
+# flutter pub run flutter_native_splash:create
+
+# flutter pub run flutter_native_splash:remove
+
 flutter_native_splash:
   color: "#ffffff"
   image: "assets/images/flutter_logo.png"
@@ -41,8 +45,10 @@ flutter_native_splash:
   ios: true
   web: true
 
+# flutter pub run flutter_launcher_icons:main
+
 flutter_icons:
-  image_path: "assets/images/flutter_logo.png"
+  image_path: "assets/images/app_logo.png"
   android: true
   ios: true
 
