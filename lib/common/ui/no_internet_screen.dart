@@ -20,9 +20,7 @@ class NoInternetConnectionScreen extends StatelessWidget {
             fit: BoxFit.fitWidth,
           ),
           IconButton(
-            onPressed: () async {
-              Navigator.pop(context);
-            },
+            onPressed: () async {},
             icon: const Icon(Icons.refresh),
             color: Colors.blue,
           ),

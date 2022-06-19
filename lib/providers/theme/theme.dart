@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart' show ChangeNotifier, ThemeData;
 
 import '../../database/hive.dart' show Boxes;
+import '../../helpers/themes/dark/dark.dart';
 import '../../helpers/themes/light/light.dart' show lightTheme;
 import '../../helpers/themes/themes.dart' show themeType;
 import '../../models/config/config.dart' show Configs;
 import '../../models/theme/theme.dart' show Themes;
 
 class ThemeProvider with ChangeNotifier {
-  ThemeData get theme => themeType == Themes.light ? lightTheme : lightTheme;
+  ThemeData get theme => themeType == Themes.light ? lightTheme : darkTheme;
 
   Future<void> changeTheme(Themes data) async {
     if (Boxes.configs.containsKey('data')) {

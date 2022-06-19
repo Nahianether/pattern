@@ -4,6 +4,7 @@ import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 import '../../database/hive.dart' show Boxes;
 import '../../models/config/config.dart' show Configs;
 import '../../models/theme/theme.dart' show Themes;
+import 'dark/dark.dart';
 import 'light/light.dart' show lightUiConfig;
 
 const Color white = Colors.white;
@@ -15,4 +16,4 @@ Themes? get themeType => Boxes.configs
     .theme;
 
 SystemUiOverlayStyle get uiConfig =>
-    themeType == Themes.light ? lightUiConfig : lightUiConfig;
+    themeType == Themes.light ? lightUiConfig : darkUiConfig;
