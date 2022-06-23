@@ -10,7 +10,7 @@ class Screen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Body(title: 'AG Backup'),
+      body: const Body(),
       bottomNavigationBar: const KBottomNavBar(),
     );
   }
