@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../helpers/constants/constants.dart';
+import '../../../helpers/constants/constants.dart';
 
 class DummyPersoanImageContainer extends StatelessWidget {
   const DummyPersoanImageContainer({

@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../helpers/constants/constants.dart';
+import '../../../helpers/constants/constants.dart';
 import 'dummy_person_image_container.dart';
 
 class ShowImageContainer extends StatelessWidget {

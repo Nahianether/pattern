@@ -11,7 +11,7 @@ import 'package:flutter/services.dart' show SystemChrome;
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart' show MultiProvider, Provider;
 
-import 'common/functions/no_internet.dart';
+import 'components/common/functions/no_internet.dart';
 import 'database/functions.dart' show HiveFuntions;
 import 'helpers/themes/themes.dart' show uiConfig;
 import 'localization/loalization.dart';
