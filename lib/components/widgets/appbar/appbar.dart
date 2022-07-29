@@ -52,15 +52,15 @@ class KAppBar extends StatelessWidget {
           const SizedBox.shrink(),
         ],
       ),
-      actions: [
-        IconButton(
-          icon: icon ?? const Icon(Icons.search),
-          onPressed: onPressed,
-        ),
-        IconButton(
-          icon: icon1 ?? const Icon(Icons.more_vert),
-          onPressed: onPressed1,
-        ),
+      actions: const [
+        // IconButton(
+        //   icon: icon ?? const Icon(Icons.search),
+        //   onPressed: onPressed,
+        // ),
+        // IconButton(
+        //   icon: icon1 ?? const Icon(Icons.more_vert),
+        //   onPressed: onPressed1,
+        // ),
       ],
     );
   }
