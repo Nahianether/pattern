@@ -5,8 +5,7 @@ import '../../../helpers/constants/constants.dart';
 import 'dummy_person_image_container.dart';
 
 class ShowImageContainer extends StatelessWidget {
-  const ShowImageContainer({Key? key, this.index = 0, this.imagePath})
-      : super(key: key);
+  const ShowImageContainer({super.key, this.index = 0, this.imagePath});
 
   final String? imagePath;
   final int index;

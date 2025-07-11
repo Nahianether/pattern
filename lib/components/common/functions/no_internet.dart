@@ -7,15 +7,15 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 bool _connected = false;
 bool get connected => _connected;
-late final Stream<ConnectivityResult> connectionStream;
+late final Stream<List<ConnectivityResult>> connectionStream;
 // BuildContext? context;
 // final connectionStreamProvider = StreamProvider((_) => connectionStream);
 
 void initConnectionListener() => connectionStream =
     Connectivity().onConnectivityChanged..listen(onConnectionChanged);
 
-void onConnectionChanged(ConnectivityResult c) =>
-    _connected = c != ConnectivityResult.none;
+void onConnectionChanged(List<ConnectivityResult> results) =>
+    _connected = results.isNotEmpty && !results.contains(ConnectivityResult.none);
 
 Future<bool> hasInternet() async {
   if (!connected) {

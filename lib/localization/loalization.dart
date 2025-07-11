@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart' show BuildContext, Locale;
-import 'package:flutter_gen/gen_l10n/localization.dart';
+import 'localization.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'
     show
         GlobalCupertinoLocalizations,
@@ -15,7 +15,7 @@ const localizationsDelegates = [
   GlobalCupertinoLocalizations.delegate,
 ];
 
-const supportedLocales = [Locale('en', '')];
+const supportedLocales = [Locale('en'), Locale('bn')];
 
 String onGenerateTitle(BuildContext context) =>
     AppLocalizations.of(context)!.appTitle;

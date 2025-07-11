@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart'
     show
         BuildContext,
-        Key,
         MaterialApp,
         StatelessWidget,
         Widget,
@@ -17,6 +16,7 @@ import 'helpers/themes/themes.dart' show uiConfig;
 import 'localization/loalization.dart';
 import 'providers/providers.dart';
 import 'providers/theme/theme.dart' show ThemeProvider;
+import 'providers/language/language.dart' show LanguageProvider;
 import 'screens/wrapper.dart' show Wrapper;
 
 Future<void> main() async {
@@ -40,16 +40,18 @@ Future<void> _init() async {
 
 class Main extends StatelessWidget {
   const Main({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    var _theme = Provider.of<ThemeProvider>(context);
+    var themeProvider = Provider.of<ThemeProvider>(context);
+    var languageProvider = Provider.of<LanguageProvider>(context);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: _theme.theme,
+      theme: themeProvider.theme,
+      locale: languageProvider.currentLocale,
       onGenerateTitle: onGenerateTitle,
       supportedLocales: supportedLocales,
       localizationsDelegates: localizationsDelegates,

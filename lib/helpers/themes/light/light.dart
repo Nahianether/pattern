@@ -21,7 +21,7 @@ import 'package:google_fonts/google_fonts.dart' show GoogleFonts;
 
 import '../themes.dart' show white;
 
-Color kLightPrimaryColor = Colors.orange.shade900.withOpacity(0.85);
+Color kLightPrimaryColor = Colors.orange.shade900.withValues(alpha: 0.85);
 
 SystemUiOverlayStyle lightUiConfig = SystemUiOverlayStyle(
   systemNavigationBarIconBrightness: Brightness.dark,
@@ -32,11 +32,10 @@ SystemUiOverlayStyle lightUiConfig = SystemUiOverlayStyle(
 
 ThemeData lightTheme = ThemeData(
   appBarTheme: lightAppBarTheme,
-  backgroundColor: white,
-  fontFamily: GoogleFonts.droidSans().fontFamily,
+  scaffoldBackgroundColor: white,
+  fontFamily: GoogleFonts.roboto().fontFamily,
   iconTheme: lightIconThemeData,
   inputDecorationTheme: lightInputDecorationTheme,
-  scaffoldBackgroundColor: white,
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 

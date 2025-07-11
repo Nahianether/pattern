@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class KAppBar extends StatelessWidget {
   const KAppBar({
-    Key? key,
+    super.key,
     this.title,
     this.logo,
     this.icon,
     this.onPressed,
     this.icon1,
     this.onPressed1,
-  }) : super(key: key);
+  });
 
   final String? title;
   final String? logo;

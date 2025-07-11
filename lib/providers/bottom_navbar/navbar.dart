@@ -22,8 +22,6 @@ class BottomNavBarProvider {
         return const Screen4();
       case Screens.five:
         return const Screen5();
-      default:
-        return const Screen1();
     }
   }
 

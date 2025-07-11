@@ -9,15 +9,15 @@ import 'screen1/screen1.dart' show Screen1;
 class Wrapper extends StatelessWidget {
   final ScreenSize _sizeConfig = ScreenSize();
 
-  Wrapper({Key? key}) : super(key: key);
+  Wrapper({super.key});
 
   @override
   Widget build(BuildContext context) {
     _sizeConfig.init(context);
-    return StreamBuilder<ConnectivityResult>(
+    return StreamBuilder<List<ConnectivityResult>>(
       stream: connectionStream,
       builder: (context, snapshot) {
-        if (snapshot.hasData && snapshot.data == ConnectivityResult.none) {
+        if (snapshot.hasData && snapshot.data!.contains(ConnectivityResult.none)) {
           return const NoInternetConnectionScreen();
         }
         return const Screen1();

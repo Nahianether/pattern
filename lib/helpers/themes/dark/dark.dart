@@ -19,37 +19,35 @@ import 'package:flutter/material.dart'
 import 'package:flutter/services.dart' show Brightness, SystemUiOverlayStyle;
 import 'package:google_fonts/google_fonts.dart' show GoogleFonts;
 
-import '../themes.dart' show white;
 
-Color kLightPrimaryColor = Colors.orange.shade900.withOpacity(0.85);
+Color kDarkPrimaryColor = Colors.orange.shade900.withValues(alpha: 0.85);
 
 SystemUiOverlayStyle darkUiConfig = SystemUiOverlayStyle(
   systemNavigationBarIconBrightness: Brightness.dark,
   systemNavigationBarColor: Colors.white,
   statusBarIconBrightness: Brightness.dark,
-  statusBarColor: kLightPrimaryColor,
+  statusBarColor: kDarkPrimaryColor,
 );
 
 ThemeData darkTheme = ThemeData(
   appBarTheme: lightAppBarTheme,
-  backgroundColor: white,
-  fontFamily: GoogleFonts.droidSans().fontFamily,
+  scaffoldBackgroundColor: Colors.black,
+  fontFamily: GoogleFonts.roboto().fontFamily,
   iconTheme: lightIconThemeData,
   inputDecorationTheme: lightInputDecorationTheme,
-  scaffoldBackgroundColor: white,
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 
 AppBarTheme lightAppBarTheme = AppBarTheme(
   elevation: 0.0,
-  backgroundColor: kLightPrimaryColor,
+  backgroundColor: kDarkPrimaryColor,
   titleTextStyle: const TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
   ),
 );
 
-IconThemeData lightIconThemeData = IconThemeData(color: kLightPrimaryColor);
+IconThemeData lightIconThemeData = IconThemeData(color: kDarkPrimaryColor);
 
 InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
   floatingLabelBehavior: FloatingLabelBehavior.always,

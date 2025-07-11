@@ -16,7 +16,7 @@ class KCustomButton extends StatelessWidget {
   final Color? gradientRightColorLight;
 
   const KCustomButton({
-    Key? key,
+    super.key,
     this.text,
     this.onPressed,
     this.color,
@@ -31,7 +31,7 @@ class KCustomButton extends StatelessWidget {
     this.gradientLeftColorLight,
     this.gradientRightColorDeep,
     this.gradientRightColorLight,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +48,8 @@ class KCustomButton extends StatelessWidget {
                 colors: [
                   opacity == true ? Colors.pink.shade700 : Colors.pink.shade700,
                   opacity == true
-                      ? Colors.pinkAccent.shade400.withOpacity(0.7)
-                      : Colors.pinkAccent.shade400.withOpacity(0.7)
+                      ? Colors.pinkAccent.shade400.withValues(alpha: 0.7)
+                      : Colors.pinkAccent.shade400.withValues(alpha: 0.7)
                 ],
                 begin: const FractionalOffset(0.0, 0.0),
                 end: const FractionalOffset(1.0, 0.0),

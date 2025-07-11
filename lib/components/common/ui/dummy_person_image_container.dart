@@ -4,10 +4,10 @@ import '../../../helpers/constants/constants.dart';
 
 class DummyPersoanImageContainer extends StatelessWidget {
   const DummyPersoanImageContainer({
-    Key? key,
+    super.key,
     this.width = 1,
     this.height = 1,
-  }) : super(key: key);
+  });
 
   final double? width;
   final double? height;

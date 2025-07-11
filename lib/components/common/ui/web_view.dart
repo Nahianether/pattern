@@ -1,13 +1,11 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewExample extends StatefulWidget {
   const WebViewExample({
-    Key? key,
+    super.key,
     this.url = 'https://flutter.dev',
-  }) : super(key: key);
+  });
 
   final String url;
 
@@ -16,17 +14,18 @@ class WebViewExample extends StatefulWidget {
 }
 
 class WebViewExampleState extends State<WebViewExample> {
+  late final WebViewController _controller;
+
   @override
   void initState() {
     super.initState();
-    if (Platform.isAndroid) WebView.platform = AndroidWebView();
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(widget.url));
   }
 
   @override
   Widget build(BuildContext context) {
-    return WebView(
-      initialUrl: widget.url,
-      javascriptMode: JavascriptMode.unrestricted,
-    );
+    return WebViewWidget(controller: _controller);
   }
 }

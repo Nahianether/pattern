@@ -10,7 +10,7 @@ class KOutlinedButton extends StatelessWidget {
   final FontWeight? fontWeight;
 
   const KOutlinedButton(
-      {Key? key,
+      {super.key,
       this.text,
       this.onPressed,
       this.color,
@@ -18,8 +18,7 @@ class KOutlinedButton extends StatelessWidget {
       this.textColor,
       this.height,
       this.width,
-      this.fontWeight})
-      : super(key: key);
+      this.fontWeight});
 
   @override
   Widget build(BuildContext context) {

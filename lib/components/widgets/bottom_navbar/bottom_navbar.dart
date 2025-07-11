@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../providers/bottom_navbar/navbar.dart';
 
 class KBottomNavBar extends StatelessWidget {
-  const KBottomNavBar({Key? key}) : super(key: key);
+  const KBottomNavBar({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -19,17 +19,20 @@ class ConfigsAdapter extends TypeAdapter<Configs> {
     return Configs(
       isFirstLaunch: fields[0] == null ? true : fields[0] as bool?,
       theme: fields[1] == null ? Themes.light : fields[1] as Themes?,
+      language: fields[2] == null ? 'en' : fields[2] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, Configs obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.isFirstLaunch)
       ..writeByte(1)
-      ..write(obj.theme);
+      ..write(obj.theme)
+      ..writeByte(2)
+      ..write(obj.language);
   }
 
   @override

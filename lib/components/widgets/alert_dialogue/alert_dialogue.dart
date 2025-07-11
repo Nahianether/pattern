@@ -7,15 +7,14 @@ class KAlertDialog extends StatelessWidget {
   final bool hideButton;
 
   const KAlertDialog(
-      {Key? key,
+      {super.key,
       this.title,
       this.content,
       required this.buttonName,
       this.button2Name,
       this.onPressed,
       this.onPressed2,
-      this.hideButton = false})
-      : super(key: key);
+      this.hideButton = false});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,6 @@ class KAlertDialog extends StatelessWidget {
             hideButton == false
                 ? ElevatedButton(
                     onPressed: onPressed2 ?? () => Navigator.pop(context),
-                    child: Text(button2Name ?? 'cancel'),
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -51,11 +49,11 @@ class KAlertDialog extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 10),
                     ),
+                    child: Text(button2Name ?? 'cancel'),
                   )
                 : const SizedBox.shrink(),
             ElevatedButton(
               onPressed: onPressed,
-              child: Text(buttonName),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -63,6 +61,7 @@ class KAlertDialog extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               ),
+              child: Text(buttonName),
             ),
           ],
         ),
